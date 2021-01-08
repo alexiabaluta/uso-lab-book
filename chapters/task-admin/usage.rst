@@ -93,8 +93,7 @@ Exerciții
 
 #) În a doua sesiune creată deschideți trei taburi. Rulați în primul tab comanda ``sudo apt-get update``, rulați în al doilea terminal comanda ``iostat -x 2 5`` și în al treilea tab rulați comanda ``tail -f /var/log/syslog``.
 
-
 Scenarii de folosire a sistemului la distanță
 ---------------------------------------------
 
-Compilarea și rularea 
+Vom folosi această subsecțiune ca un tutorial pentru a exemplifica un workflow pentru lucrul la distanță
