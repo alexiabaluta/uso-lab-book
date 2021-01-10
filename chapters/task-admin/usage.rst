@@ -25,7 +25,7 @@ Atunci când ne conectăm la un calculator printr-un client SSH și rulăm comen
 Dacă avem o aplicație care rulează mult timp, cum ar fi o căutare intensă în sistemul de fișiere folosind ``updatedb``, și conexiunea SSH se întrerupe, se va întrerupe și execuția comenzii ``updatedb``.
 
 Pentru a rezolva această problemă și a ne folosi de disponibilitatea oferită de un sistem distanță, vom folosi utilitarul ``tmux``.
-Aceasta pornește o sesiune de shell care este independentă de terminalul în care rulează, astfel, putem să ne conectăm și să ne deconectăm de la ea.
+Acest utilitar pornește o sesiune de shell care este independentă de terminalul în care rulează, astfel, putem să ne conectăm și să ne deconectăm de la ea.
 
 .. _task_admin_usage_tmux_create:
 
@@ -51,6 +51,7 @@ Aplicația ``tmux`` permite detașarea de la o sesiune folosind combinația de t
 
         Vom vedea pe parcursul acestei subsecțiuni că toate scurtăturile de taste ale aplicației ``tmux`` folosesc ca prefix combinația ``Ctrl+v``.
         Această combinație este predefinită pe mașina virtuală ``USO.ova``, dar pe sistemele obișnuite combinația va fi ``Ctrl+b``.
+        Putem modifica prefixul în fișierul de configurare ``tmux.conf``.
 
 .. figure:: ./gifs/tmux-dettach.gif
     :alt: Detașarea de la o sesiune ``tmux``
@@ -77,11 +78,11 @@ Pentru a ne reatașa la sesiune folosim comanda ``tmux attach-session -t 0``.
 Taburi în ``tmux``
 ^^^^^^^^^^^^^^^^^^
 
-Pentru a ne organiza terminalele deschise pe stația de la distanță, recomandăm folosirea taburilor(numite ferestre - *window* în ``tmux``), deoarece acestea sunt deschise pe durata sesiunii și permit deschiderea și gestiunea facilă.
+Pentru a ne organiza terminalele deschise pe stația de la distanță, recomandăm folosirea taburilor (numite ferestre - *window* în ``tmux``), deoarece acestea sunt deschise pe durata sesiunii și permit crearea și gestiunea facilă.
 
 De exemplu, pentru a lucra la o aplicație, avem nevoie să deschidem într-un tab documentul sursă pe care îl gestionăm, într-un tab avem un shell în care compilăm aplicația și într-un tab rulăm comenzi de verificare a aplicației.
-Având fiecare tab cu sarcina sa desemnată păstrăm un istoric mai curat și mai ușor de interpretat.
-Astfel vom reducem numărul de comenzi pe care le rulăm pentru a reporni editorul de text, a schimba directul de lucru etc.
+Având fiecare tab cu sarcina sa desemnată, păstrăm un istoric mai curat și mai ușor de interpretat.
+Astfel vom reduce numărul de comenzi pe care le rulăm pentru a reporni editorul de text, pentru a schimba directul de lucru etc.
 
 Pentru a porni un nou tab folosim combinația de taste ``Ctrl+v c``.
 
@@ -105,9 +106,13 @@ Exerciții
 ^^^^^^^^^
 
 #) Creați două sesiuni de ``tmux``.
-#) În prima sesiune creată deschideți două taburi. Rulați în primul tab comanda ``htop`` și în al doilea tab deschideți fișierul ``/etc/passwd`` folosind editorul de text ``nano``.
-#) În a doua sesiune creată deschideți trei taburi. Rulați în primul tab comanda ``sudo apt-get update``, rulați în al doilea terminal comanda ``iostat -x 2 5`` și în al treilea tab rulați comanda ``tail -f /var/log/syslog``.
-Reveniți la primul tab din sesiune.
+
+#) În prima sesiune creată deschideți două taburi.
+   Rulați în primul tab comanda ``htop`` și în al doilea tab deschideți fișierul ``/etc/passwd`` folosind editorul de text ``nano``.
+
+#) În a doua sesiune creată deschideți trei taburi.
+   Rulați în primul tab comanda ``sudo apt-get update``, rulați în al doilea terminal comanda ``iostat -x 2 5`` și în al treilea tab rulați comanda ``tail -f /var/log/syslog``.
+   Reveniți la primul tab din sesiune.
 
 .. _task_admin_usage_scenarios:
 
