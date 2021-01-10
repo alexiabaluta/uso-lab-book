@@ -191,6 +191,7 @@ Exercițiu: Stocarea partajată folosind Dropbox
 
     Pentru rezolvarea acestui exercițiu, rulați în directorul ``~/uso.git/labs/03-user/lab-containers/`` comanda ``./lab_prepare.sh install dropbox``.
     Pentru a ne conecta la infrastructura pentru această secțiune, vom folosi comanda ``./lab_prepare.sh connect dropbox``.
+    Aplicația dropbox este deja descărcată, trebuie doar să o porniți.
 
 #) Conectați-vă la stația ``dropbox`` și porniți aplicația Dropbox pe aceasta.
 
